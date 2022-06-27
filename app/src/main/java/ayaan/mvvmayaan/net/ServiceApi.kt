@@ -9,5 +9,5 @@ import retrofit2.http.Path
 interface ServiceApi {
     // eg) https://api.itbook.store/1.0/search/kotlin/1
     @GET("search/{query}/{page}")
-    suspend fun getSearch(@Path("query") query: String, @Path("page") page: String): SearchRes
+    fun getSearch(@Path("query") query: String, @Path("page") page: String): Call<SearchRes>
 }
