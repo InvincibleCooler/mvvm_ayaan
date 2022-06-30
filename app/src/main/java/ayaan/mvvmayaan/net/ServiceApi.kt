@@ -10,4 +10,7 @@ interface ServiceApi {
     // eg) https://api.itbook.store/1.0/search/kotlin/1
     @GET("search/{query}/{page}")
     fun getSearch(@Path("query") query: String, @Path("page") page: String): Call<SearchRes>
+
+    @GET("search/{query}/{page}")
+    fun getSearchAsFlow(@Path("query") query: String, @Path("page") page: String): SearchRes
 }
